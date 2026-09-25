@@ -336,3 +336,7 @@ body.wsite-page-programs .imageGallery > div {
     padding: 0 !important;
     box-sizing: border-box !important;
 }
+/* Fix gallery image cropping and vertical spacing */
+body.wsite-page-programs .imageGallery .galleryImage {
+    max-width: none !important;
+}
