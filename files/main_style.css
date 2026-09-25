@@ -318,17 +318,20 @@ div.paragraph ul, div.paragraph ol { padding-left: 3em !important; margin: 5px 0
 div.paragraph li { padding-left: 5px !important; margin: 3px 0 0 !important; }
 div.paragraph ul, div.paragraph ul li { list-style: disc outside !important; }
 div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; }
-/* Programs gallery - preserve original 5 column layout */
-.imageGallery {
-    display: block !important;
+/* Programs gallery - fixed 5-column layout */
+body.wsite-page-programs .imageGallery {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
     width: 100% !important;
-    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
 }
 
-.imageGallery > div {
+body.wsite-page-programs .imageGallery > div {
     display: block !important;
-    float: left !important;
-    width: 19.95% !important;
+    float: none !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
