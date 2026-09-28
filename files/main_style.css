@@ -438,3 +438,21 @@ body.wsite-page-programs .imageGallery .galleryImage {
         line-height: 1.3 !important;
     }
 }
+
+/* Blog hero - keep banner compact */
+body.wsite-page-blog .wsite-header-section {
+    height: 500px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+body.wsite-page-blog .wsite-header-section .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+body.wsite-page-blog .wsite-header-section .wsite-image img {
+    width: 274px !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
