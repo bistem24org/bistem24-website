@@ -580,86 +580,19 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <script>
 (function() {
+  var currentSlide = 0;
+  var totalSlides = 5;
+  var track = document.querySelector('#bistem-news-slideshow .bistem-news-track');
 
-    var slideshow = document.getElementById('bistem-news-slideshow');
-    var track = slideshow
-        ? slideshow.querySelector('.bistem-news-track')
-        : null;
+  if (!track) return;
 
-    if (!slideshow || !track) return;
-
-    var slides = Array.prototype.slice.call(track.children);
-
-    if (!slides.length) return;
-
-    var currentSlide = 0;
-
-    function setSlideshowHeight() {
-
-        var slide = slides[currentSlide];
-
-        if (!slide) return;
-
-        var image = slide.querySelector('img');
-
-        if (!image) return;
-
-        function updateHeight() {
-
-            var width = slideshow.clientWidth;
-
-            if (!image.naturalWidth || !image.naturalHeight) return;
-
-            var height =
-                width * (image.naturalHeight / image.naturalWidth);
-
-            slideshow.style.height =
-                Math.ceil(height) + 'px';
-        }
-
-        if (image.complete) {
-            updateHeight();
-        } else {
-            image.addEventListener('load', updateHeight, {
-                once: true
-            });
-        }
-    }
-
-    function showSlide(index) {
-
-        currentSlide = index;
-
-        slides.forEach(function(slide) {
-            slide.classList.remove('active');
-        });
-
-        slides[currentSlide].classList.add('active');
-
-        setSlideshowHeight();
-    }
-
-    /* Start with first image */
-    showSlide(0);
-
-    /* Keep image proportion correct on resize */
-    window.addEventListener('resize', function() {
-        setSlideshowHeight();
-    });
-
-    /* Change image every 3 seconds */
-    setInterval(function() {
-
-        var nextSlide =
-            (currentSlide + 1) % slides.length;
-
-        showSlide(nextSlide);
-
-    }, 3000);
-
+  setInterval(function() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    track.style.transform = 'translateX(-' + (currentSlide * 20) + '%)';
+  }, 5000);
 })();
 </script>
-
+	
 </div>
 
 <div style="height:20px;overflow:hidden"></div></div>
