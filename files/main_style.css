@@ -344,3 +344,57 @@ body.wsite-page-programs .imageGallery > div:nth-child(5n+1) {
 body.wsite-page-programs .imageGallery .galleryImage {
     max-width: none !important;
 }
+
+/* Home page - News Highlights slideshow */
+#bistem-news-slideshow {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+#bistem-news-slideshow .bistem-news-track > div {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+#bistem-news-slideshow .bistem-news-track > div > img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    background: #f7f7f7;
+}
+
+/* News caption */
+#bistem-news-slideshow .bistem-news-track > div > div {
+    top: auto !important;
+    bottom: 0 !important;
+    background: rgba(0,0,0,0.72) !important;
+    padding: 12px 18px !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    #bistem-news-slideshow {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+    #bistem-news-slideshow .bistem-news-track > div {
+        aspect-ratio: 4 / 3;
+    }
+
+    #bistem-news-slideshow .bistem-news-track > div > div {
+        font-size: 12px !important;
+        padding: 8px 10px !important;
+    }
+}
