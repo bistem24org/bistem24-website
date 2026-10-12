@@ -1,0 +1,351 @@
+
+/* ========================================
+   BiSTEM24 HEADER — BRAND COLORS
+======================================== */
+
+:root {
+  --header-navy: #182f55;
+  --header-blue: #2479ad;
+  --header-orange: #ed7d24;
+  --header-text: #263746;
+  --header-muted: #64717b;
+  --header-light: #f5f8fb;
+  --header-border: #e5eaf0;
+  --header-white: #ffffff;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background: var(--header-white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header * {
+  box-sizing: border-box;
+}
+
+.header-container {
+  width: min(1160px, 92%);
+  margin: 0 auto;
+}
+
+/* ========================================
+   TOP CONTACT BAR
+======================================== */
+
+.header-topbar {
+  background: var(--header-light);
+  border-bottom: 1px solid var(--header-border);
+}
+
+.header-topbar-inner {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-contact,
+.header-top-right {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.header-contact a,
+.header-top-link {
+  color: var(--header-muted);
+  font-size: 11px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-contact a:hover,
+.header-top-link:hover {
+  color: var(--header-blue);
+}
+
+.header-contact-icon {
+  margin-right: 6px;
+  color: var(--header-blue);
+}
+
+.header-top-divider {
+  width: 1px;
+  height: 15px;
+  background: #d7dfe7;
+}
+
+.header-social-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-social-mini a {
+  color: var(--header-navy);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-social-mini a:hover {
+  color: var(--header-orange);
+}
+
+/* ========================================
+   MAIN HEADER
+======================================== */
+
+.header-main {
+  background: var(--header-white);
+  border-bottom: 1px solid #edf0f3;
+}
+
+.header-main-inner {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* Official logo */
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+.header-logo-image {
+  display: block;
+  width: 175px;
+  height: 65px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.header-navigation > a {
+  position: relative;
+  padding: 12px 0;
+  color: var(--header-text);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.header-navigation > a:not(.header-donate-button)::after {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--header-orange);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.header-navigation > a:not(.header-donate-button):hover,
+.header-navigation > a[aria-current="page"] {
+  color: var(--header-blue);
+}
+
+.header-navigation > a:not(.header-donate-button):hover::after,
+.header-navigation > a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* Donate button */
+.header-navigation > .header-donate-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 21px;
+  border: 1px solid var(--header-orange);
+  border-radius: 3px;
+  background: var(--header-orange);
+  color: var(--header-white);
+  font-size: 11px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-navigation > .header-donate-button:hover {
+  transform: translateY(-1px);
+  border-color: #d96b18;
+  background: #d96b18;
+  color: var(--header-white);
+}
+
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
+
+.header-menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  border: 1px solid var(--header-border);
+  border-radius: 4px;
+  background: var(--header-white);
+  cursor: pointer;
+}
+
+.header-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--header-navy);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+  .header-main-inner {
+    gap: 20px;
+  }
+
+  .header-logo-image {
+    width: 155px;
+    height: 60px;
+  }
+
+  .header-navigation {
+    gap: 15px;
+  }
+
+  .header-navigation > a {
+    font-size: 10px;
+  }
+
+  .header-navigation > .header-donate-button {
+    padding: 12px 15px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 760px) {
+  .header-topbar-inner {
+    min-height: 34px;
+  }
+
+  .header-contact a,
+  .header-top-link {
+    font-size: 10px;
+  }
+
+  .header-top-right {
+    gap: 8px;
+  }
+
+  .header-social-mini {
+    gap: 8px;
+  }
+
+  .header-main-inner {
+    position: relative;
+    min-height: 76px;
+  }
+
+  .header-logo-image {
+    width: 150px;
+    height: 56px;
+  }
+
+  .header-menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .header-navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 18px 18px;
+    border: 1px solid var(--header-border);
+    border-top: none;
+    background: var(--header-white);
+    box-shadow: 0 10px 22px rgba(24, 47, 85, 0.1);
+  }
+
+  .header-navigation.is-open {
+    display: flex;
+  }
+
+  .header-navigation > a {
+    padding: 14px 5px;
+    border-bottom: 1px solid #edf0f3;
+    font-size: 12px;
+  }
+
+  .header-navigation > a:not(.header-donate-button)::after {
+    display: none;
+  }
+
+  .header-navigation > .header-donate-button {
+    align-self: flex-start;
+    margin-top: 12px;
+    padding: 13px 20px;
+    border-bottom: none;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+  .header-container {
+    width: 94%;
+  }
+
+  .header-logo-image {
+    width: 135px;
+    height: 52px;
+  }
+
+  .header-contact a {
+    font-size: 9px;
+  }
+
+  .header-social-mini {
+    display: none;
+  }
+}

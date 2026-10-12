@@ -1,0 +1,520 @@
+
+/* ==========================================
+   BiSTEM24 ABOUT PAGE
+   Brand colours: Navy, Blue, Orange, White
+   ========================================== */
+
+:root {
+    --about-navy: #182f55;
+    --about-blue: #2479ad;
+    --about-orange: #ed7d24;
+    --about-white: #ffffff;
+    --about-text: #344256;
+    --about-muted: #637083;
+    --about-light: #f3f7fa;
+    --about-border: #dce5ec;
+    --about-shadow: 0 10px 28px rgba(24, 47, 85, 0.08);
+}
+
+.about-page,
+.about-page * {
+    box-sizing: border-box;
+}
+
+.about-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--about-white);
+    color: var(--about-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4,
+.about-page p {
+    overflow-wrap: break-word;
+}
+
+/* ==========================================
+   ABOUT INTRODUCTION
+   ========================================== */
+
+.about-intro-section {
+    width: 100%;
+    padding: 64px 24px 76px;
+    background: var(--about-white);
+}
+
+.about-intro-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.about-heading {
+    margin: 0 auto 44px;
+    text-align: center;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    margin: 0 0 12px;
+    color: var(--about-orange);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.about-heading h1 {
+    margin: 0 0 18px;
+    color: var(--about-navy);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.about-heading h1::after {
+    display: block;
+    width: 66px;
+    height: 4px;
+    margin: 18px auto 0;
+    border-radius: 4px;
+    background: var(--about-orange);
+    content: "";
+}
+
+.about-heading-text {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--about-muted);
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+/* Hide decorative About heading image if present */
+
+.about-title-image,
+.about-heading > img {
+    display: none !important;
+}
+
+/* ==========================================
+   VISION
+   ========================================== */
+
+.vision-content {
+    width: 100%;
+}
+
+.vision-block {
+    padding: 32px 36px;
+    border-left: 5px solid var(--about-orange);
+    border-radius: 0 10px 10px 0;
+    background: var(--about-light);
+}
+
+.vision-block h2 {
+    margin: 0 0 16px;
+    color: var(--about-navy);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.vision-block p {
+    margin: 0;
+    color: var(--about-text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.vision-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid var(--about-border);
+    border-radius: 12px;
+    background: var(--about-white);
+    box-shadow: var(--about-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(24, 47, 85, 0.12);
+}
+
+.vision-number {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--about-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.vision-card h3 {
+    margin: 0 0 14px;
+    color: var(--about-navy);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.vision-card p {
+    margin: 0;
+    color: var(--about-text);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+/* ==========================================
+   LEADERSHIP SECTION
+   ========================================== */
+
+.leadership-section {
+    width: 100%;
+    padding: 70px 24px 80px;
+    background: var(--about-light);
+}
+
+.leadership-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.leadership-heading {
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.leadership-title {
+    margin: 0;
+    color: var(--about-navy);
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.leadership-title::after {
+    display: block;
+    width: 66px;
+    height: 4px;
+    margin: 18px auto 0;
+    border-radius: 4px;
+    background: var(--about-orange);
+    content: "";
+}
+
+.leadership-intro {
+    max-width: 720px;
+    margin: 20px auto 0;
+    color: var(--about-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Each leader is a two-column card */
+
+.leader-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(30px, 5vw, 64px);
+    align-items: center;
+    margin: 0 0 40px;
+    padding: 34px;
+    border: 1px solid var(--about-border);
+    border-radius: 16px;
+    background: var(--about-white);
+    box-shadow: var(--about-shadow);
+}
+
+.leader-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Alternate the second and subsequent profiles */
+
+.leader-card:nth-of-type(even) .leader-image-column {
+    order: 2;
+}
+
+.leader-card:nth-of-type(even) .leader-content {
+    order: 1;
+}
+
+.leader-image-column {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.leader-image {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto;
+    border: 1px solid var(--about-border);
+    border-radius: 14px;
+    background: var(--about-light);
+    object-fit: cover;
+    object-position: center top;
+}
+
+.leader-content {
+    min-width: 0;
+}
+
+.leader-role-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--about-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+.leader-content h3 {
+    margin: 0 0 10px;
+    color: var(--about-navy);
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.leader-content h4 {
+    margin: 0 0 18px;
+    color: var(--about-blue);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.leader-content p {
+    margin: 0 0 16px;
+    color: var(--about-text);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.leader-content p:last-child {
+    margin-bottom: 0;
+}
+
+.leader-content .leader-subtitle {
+    margin: 0 0 20px;
+    padding-left: 14px;
+    border-left: 3px solid var(--about-orange);
+    color: var(--about-muted);
+    font-weight: 600;
+}
+
+/* Leadership links */
+
+.learn-more-button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 12px 24px;
+    border: 2px solid var(--about-orange);
+    border-radius: 5px;
+    background: var(--about-orange);
+    color: var(--about-white);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.learn-more-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--about-navy);
+    background: var(--about-navy);
+    color: var(--about-white);
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+    .about-intro-section {
+        padding: 52px 22px 60px;
+    }
+
+    .leadership-section {
+        padding: 58px 22px 64px;
+    }
+
+    .leader-card {
+        gap: 28px;
+        padding: 26px;
+    }
+
+    .leader-content h3 {
+        font-size: 26px;
+    }
+
+    .leader-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE
+   ========================================== */
+
+@media (max-width: 650px) {
+    .about-intro-section {
+        padding: 42px 18px 48px;
+    }
+
+    .about-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-heading h1 {
+        font-size: 34px;
+    }
+
+    .about-heading-text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .vision-block {
+        padding: 24px 20px;
+    }
+
+    .vision-block h2 {
+        font-size: 26px;
+    }
+
+    .vision-block p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .vision-card {
+        padding: 23px;
+    }
+
+    .vision-card h3 {
+        font-size: 21px;
+    }
+
+    .leadership-section {
+        padding: 46px 18px 52px;
+    }
+
+    .leadership-heading {
+        margin-bottom: 32px;
+    }
+
+    .leadership-title {
+        font-size: 32px;
+    }
+
+    .leadership-intro {
+        font-size: 15px;
+    }
+
+    .leader-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        margin-bottom: 24px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .leader-card:nth-of-type(even) .leader-image-column,
+    .leader-card:nth-of-type(even) .leader-content {
+        order: initial;
+    }
+
+    .leader-image {
+        width: 100%;
+        max-width: 340px;
+        aspect-ratio: 4 / 4.2;
+    }
+
+    .leader-content h3 {
+        font-size: 25px;
+    }
+
+    .leader-content h4 {
+        font-size: 16px;
+    }
+
+    .leader-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 400px) {
+    .about-heading h1 {
+        font-size: 30px;
+    }
+
+    .vision-block {
+        padding: 21px 17px;
+    }
+
+    .vision-card {
+        padding: 20px;
+    }
+
+    .leader-card {
+        padding: 16px;
+    }
+
+    .leader-content h3 {
+        font-size: 23px;
+    }
+
+    .learn-more-button {
+        width: 100%;
+    }
+}
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+    .vision-card,
+    .learn-more-button {
+        transition: none;
+    }
+}

@@ -1,0 +1,441 @@
+/* =========================================
+   OLUBUNMI ONANUGA PROFILE PAGE
+   ========================================= */
+
+.bunmi-page {
+    --bunmi-orange: #d66f2c;
+    --bunmi-dark: #182f23;
+    --bunmi-text: #282828;
+    --bunmi-muted: #737373;
+    --bunmi-light: #f7f5f1;
+
+    color: var(--bunmi-text);
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.bunmi-page *,
+.bunmi-page *::before,
+.bunmi-page *::after {
+    box-sizing: border-box;
+}
+
+.bunmi-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+
+.bunmi-hero {
+    padding: 75px 6% 85px;
+    background: #ffffff;
+}
+
+.bunmi-hero-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 75px;
+}
+
+.bunmi-image-column {
+    min-width: 0;
+}
+
+.bunmi-image-frame {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+.bunmi-profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.bunmi-image-caption {
+    margin: 16px 0 0;
+    color: var(--bunmi-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bunmi-intro {
+    padding: 20px 0;
+}
+
+.bunmi-eyebrow {
+    margin: 0 0 22px;
+    color: var(--bunmi-orange);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    line-height: 1.7;
+}
+
+.bunmi-intro h1 {
+    margin: 0;
+    color: var(--bunmi-dark);
+    font-size: clamp(42px, 5.3vw, 74px);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -2.5px;
+}
+
+.bunmi-intro h1 span {
+    display: block;
+    margin-top: 10px;
+    color: var(--bunmi-orange);
+}
+
+.bunmi-accent-line {
+    width: 65px;
+    height: 4px;
+    margin: 30px 0 22px;
+    background: var(--bunmi-orange);
+}
+
+.bunmi-role {
+    max-width: 520px;
+    margin: 0 0 20px;
+    color: var(--bunmi-dark);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.bunmi-intro-description {
+    max-width: 500px;
+    margin: 0;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.bunmi-scroll-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--bunmi-orange);
+    color: var(--bunmi-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color 0.25s ease;
+}
+
+.bunmi-scroll-link span {
+    color: var(--bunmi-orange);
+    font-size: 18px;
+}
+
+.bunmi-scroll-link:hover {
+    color: var(--bunmi-orange);
+}
+
+/* BIOGRAPHY */
+
+.bunmi-biography {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 85px 30px 100px;
+}
+
+.bunmi-section-heading {
+    max-width: 700px;
+    margin-bottom: 65px;
+}
+
+.bunmi-section-heading h2,
+.bunmi-highlight h2 {
+    margin: 0;
+    color: var(--bunmi-dark);
+    font-size: clamp(32px, 4vw, 51px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.4px;
+}
+
+.bunmi-section-heading h2 span {
+    color: var(--bunmi-orange);
+}
+
+.bunmi-content-grid {
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 65px;
+    padding-bottom: 52px;
+    margin-bottom: 52px;
+    border-bottom: 1px solid #e7e4df;
+}
+
+.bunmi-content-grid-last {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.bunmi-content-label {
+    align-self: start;
+}
+
+.bunmi-section-number {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--bunmi-orange);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bunmi-content-label h3 {
+    margin: 0;
+    color: var(--bunmi-dark);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.bunmi-content p {
+    margin: 0 0 22px;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+.bunmi-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* CONTRIBUTION HIGHLIGHT */
+
+.bunmi-highlight {
+    padding: 85px 6%;
+    background: var(--bunmi-light);
+}
+
+.bunmi-highlight-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.bunmi-highlight .bunmi-eyebrow {
+    margin-bottom: 20px;
+}
+
+.bunmi-highlight h2 {
+    margin-bottom: 38px;
+}
+
+.bunmi-focus-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.bunmi-focus-list span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 10px 17px;
+    border: 1px solid #dedbd5;
+    background: #ffffff;
+    color: #424242;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* BACK TO BOARD */
+
+.bunmi-back-section {
+    display: flex;
+    justify-content: center;
+    padding: 35px 6% 60px;
+}
+
+.bunmi-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--bunmi-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color 0.25s ease;
+}
+
+.bunmi-back-link span {
+    color: var(--bunmi-orange);
+    font-size: 20px;
+}
+
+.bunmi-back-link:hover {
+    color: var(--bunmi-orange);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .bunmi-hero {
+        padding: 55px 5% 65px;
+    }
+
+    .bunmi-hero-inner {
+        gap: 38px;
+    }
+
+    .bunmi-image-frame {
+        height: 400px;
+    }
+
+    .bunmi-intro h1 {
+        font-size: clamp(38px, 5.5vw, 58px);
+        letter-spacing: -1.5px;
+    }
+
+    .bunmi-role {
+        font-size: 17px;
+    }
+
+    .bunmi-biography {
+        padding: 70px 5%;
+    }
+
+    .bunmi-content-grid {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 35px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+    .bunmi-hero {
+        padding: 35px 22px 50px;
+    }
+
+    .bunmi-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .bunmi-image-frame {
+        height: 360px;
+    }
+
+    .bunmi-image-caption {
+        font-size: 9px;
+        letter-spacing: 1.7px;
+    }
+
+    .bunmi-intro {
+        padding: 0;
+    }
+
+    .bunmi-eyebrow {
+        margin-bottom: 15px;
+        font-size: 10px;
+    }
+
+    .bunmi-intro h1 {
+        font-size: clamp(42px, 11vw, 60px);
+    }
+
+    .bunmi-accent-line {
+        margin: 23px 0 18px;
+    }
+
+    .bunmi-role {
+        font-size: 17px;
+    }
+
+    .bunmi-intro-description {
+        font-size: 14px;
+    }
+
+    .bunmi-biography {
+        padding: 60px 22px 70px;
+    }
+
+    .bunmi-section-heading {
+        margin-bottom: 42px;
+    }
+
+    .bunmi-section-heading h2,
+    .bunmi-highlight h2 {
+        font-size: 35px;
+    }
+
+    .bunmi-content-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+    }
+
+    .bunmi-content-grid-last {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .bunmi-section-number {
+        margin-bottom: 10px;
+    }
+
+    .bunmi-content-label h3 {
+        font-size: 20px;
+    }
+
+    .bunmi-content p {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .bunmi-highlight {
+        padding: 60px 22px;
+    }
+
+    .bunmi-focus-list {
+        gap: 9px;
+    }
+
+    .bunmi-focus-list span {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .bunmi-back-section {
+        padding: 30px 20px 45px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .bunmi-image-frame {
+        height: 300px;
+    }
+
+    .bunmi-intro h1 {
+        font-size: 39px;
+    }
+
+    .bunmi-section-heading h2,
+    .bunmi-highlight h2 {
+        font-size: 30px;
+    }
+}

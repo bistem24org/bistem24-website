@@ -1,0 +1,543 @@
+/* =========================================================
+   BISTEM24 - FOUNDER RITA PAGE
+   founder-rita.css
+   ========================================================= */
+
+
+.founder-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.founder-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOUNDER INTRO
+   ========================================================= */
+
+.founder-intro-section {
+    width: 100%;
+    margin: 0;
+    padding: 75px 30px 65px;
+    background: #ffffff;
+}
+
+.founder-intro-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* TITLE */
+
+.founder-title-column {
+    width: 100%;
+    padding: 0;
+}
+
+.founder-title-column h1 {
+    margin: 0;
+    padding: 0;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+
+    line-height: 0.98;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+.founder-title-line {
+    width: 55px;
+    height: 4px;
+
+    margin: 28px 0 18px;
+
+    background: #e33f3f;
+}
+
+.founder-role {
+    margin: 0;
+    padding: 0;
+
+    color: #555555;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* IMAGE */
+
+.founder-image-column {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-image {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+
+    object-fit: cover;
+    object-position: center center;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.founder-content-section {
+    width: 100%;
+    margin: 0;
+    padding: 30px 30px 80px;
+
+    background: #ffffff;
+}
+
+.founder-content-container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px;
+}
+
+.founder-column {
+    width: 100%;
+}
+
+.founder-column p {
+    margin: 0 0 24px;
+    padding: 0;
+
+    color: #444444;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+   ========================================================= */
+
+.founder-highlight-section {
+    width: 100%;
+    margin: 0;
+    padding: 65px 30px;
+
+    background: #f5f5f3;
+}
+
+.founder-highlight-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+.highlight-number {
+    color: #e33f3f;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.highlight-content h2 {
+    margin: 0 0 12px;
+    padding: 0;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.highlight-content p {
+    margin: 0;
+    padding: 0;
+
+    color: #555555;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ARTICLES
+   ========================================================= */
+
+.articles-section {
+    width: 100%;
+    margin: 0;
+    padding: 80px 30px 90px;
+
+    background: #ffffff;
+}
+
+.articles-container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.articles-title {
+    margin: 0 0 55px;
+    padding: 0;
+
+    color: #c23b3b;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.articles-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 65px;
+    row-gap: 55px;
+}
+
+.article-item {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.article-item h3 {
+    margin: 0 0 12px;
+    padding: 0;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.55;
+}
+
+.article-item span {
+    display: block;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.article-item p {
+    margin: 15px 0 0;
+    padding: 0;
+
+    color: #555555;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .founder-intro-section {
+        padding: 60px 25px 50px;
+    }
+
+    .founder-intro-container {
+        max-width: 750px;
+
+        grid-template-columns: 1fr 330px;
+
+        gap: 40px;
+    }
+
+    .founder-title-column h1 {
+        font-size: 45px;
+    }
+
+    .founder-image {
+        height: 410px;
+    }
+
+    .founder-content-section {
+        padding: 20px 25px 65px;
+    }
+
+    .founder-content-container {
+        max-width: 750px;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+    .founder-column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .founder-highlight-section {
+        padding: 55px 25px;
+    }
+
+    .founder-highlight-container {
+        max-width: 750px;
+
+        grid-template-columns: 160px 1fr;
+
+        gap: 35px;
+    }
+
+    .highlight-number {
+        font-size: 58px;
+    }
+
+    .articles-section {
+        padding: 65px 25px 75px;
+    }
+
+    .articles-container {
+        max-width: 750px;
+    }
+
+    .articles-grid {
+        column-gap: 40px;
+        row-gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .founder-intro-section {
+        padding: 45px 20px 45px;
+    }
+
+    .founder-intro-container {
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+
+        align-items: stretch;
+    }
+
+    .founder-title-column {
+        order: 1;
+    }
+
+    .founder-image-column {
+        order: 2;
+    }
+
+    .founder-title-column h1 {
+        font-size: 40px;
+        letter-spacing: -1px;
+
+        text-align: left;
+    }
+
+    .founder-title-line {
+        margin-top: 22px;
+    }
+
+    .founder-image {
+        width: 100%;
+        max-width: 330px;
+        height: 390px;
+
+        margin: 0 auto;
+    }
+
+
+    /* CONTENT */
+
+    .founder-content-section {
+        padding: 10px 20px 55px;
+    }
+
+    .founder-content-container {
+        display: block;
+    }
+
+    .founder-column {
+        margin: 0 0 5px;
+    }
+
+    .founder-column p {
+        font-size: 14px;
+        line-height: 1.7;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* HIGHLIGHT */
+
+    .founder-highlight-section {
+        padding: 45px 20px;
+    }
+
+    .founder-highlight-container {
+        display: block;
+        text-align: center;
+    }
+
+    .highlight-number {
+        margin-bottom: 18px;
+
+        font-size: 55px;
+    }
+
+    .highlight-content h2 {
+        font-size: 27px;
+    }
+
+    .highlight-content p {
+        font-size: 14px;
+    }
+
+
+    /* ARTICLES */
+
+    .articles-section {
+        padding: 55px 20px 65px;
+    }
+
+    .articles-title {
+        margin-bottom: 40px;
+        font-size: 29px;
+    }
+
+    .articles-grid {
+        display: block;
+    }
+
+    .article-item {
+        margin-bottom: 42px;
+    }
+
+    .article-item h3 {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .founder-intro-section {
+        padding: 35px 15px 40px;
+    }
+
+    .founder-title-column h1 {
+        font-size: 34px;
+    }
+
+    .founder-image {
+        max-width: 290px;
+        height: 350px;
+    }
+
+    .founder-content-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .founder-column p {
+        font-size: 13px;
+    }
+
+    .founder-highlight-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .articles-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .articles-title {
+        font-size: 27px;
+    }
+
+}
