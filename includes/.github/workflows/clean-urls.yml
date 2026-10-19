@@ -1,0 +1,27 @@
+
+name: Prepare Clean URLs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  clean-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare clean URL pages
+        run: |
+          for file in about programs news blog donate the-board; do
+            if [ -f "$file.html" ] && [ ! -f "$file/index.html" ]; then
+              mkdir -p "$file"
+              cp "$file.html" "$file/index.html"
+            fi
+          done
