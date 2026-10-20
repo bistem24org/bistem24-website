@@ -1,144 +1,178 @@
 
-/* BISTEM24 Privacy Policy page styling */
+/* =========================================
+   BiSTEM24 Privacy Policy Page
+   ========================================= */
 
+:root {
+  --privacy-blue: #1477b9;
+  --privacy-orange: #f58220;
+  --privacy-navy: #172f4d;
+  --privacy-text: #3f4b59;
+  --privacy-muted: #687789;
+  --privacy-background: #f3f8fc;
+  --privacy-border: #e1e8ef;
+  --privacy-white: #ffffff;
+}
+
+/* Main page */
 .privacy-page {
-    --bistem-blue: #1477b9;
-    --bistem-orange: #f58220;
-    --bistem-navy: #172f4d;
-    --bistem-text: #354353;
-    --bistem-light: #f3f8fc;
-
-    color: var(--bistem-text);
-    background: #ffffff;
-    font-family: inherit;
-    line-height: 1.8;
+  background: var(--privacy-white);
+  color: var(--privacy-text);
+  font-family: inherit;
+  line-height: 1.8;
 }
 
-.privacy-page,
-.privacy-page * {
-    box-sizing: border-box;
+/* Hero section */
+.privacy-page .privacy-hero {
+  background: var(--privacy-background);
+  border-bottom: 1px solid var(--privacy-border);
+  padding: 75px 20px 65px;
 }
 
-.privacy-container {
-    width: min(100% - 40px, 1100px);
-    margin: 0 auto;
+.privacy-page .privacy-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.privacy-hero {
-    position: relative;
-    overflow: hidden;
-    padding: 76px 0 68px;
-    background: var(--bistem-light);
-    border-bottom: 1px solid #e1ebf3;
+.privacy-page .privacy-eyebrow {
+  margin: 0 0 12px;
+  color: var(--privacy-orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.privacy-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 7px;
-    background: var(--bistem-orange);
+.privacy-page .privacy-hero h1 {
+  margin: 0 0 18px;
+  color: var(--privacy-navy);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.privacy-hero::after {
-    content: "";
-    position: absolute;
-    right: -65px;
-    bottom: -115px;
-    width: 240px;
-    height: 240px;
-    border: 30px solid rgba(20, 119, 185, 0.08);
-    border-radius: 50%;
-    pointer-events: none;
+.privacy-page .privacy-hero > .privacy-container > p:not(.privacy-eyebrow):not(.privacy-updated) {
+  max-width: 720px;
+  margin: 0;
+  font-size: 17px;
 }
 
-.privacy-eyebrow {
-    position: relative;
-    z-index: 1;
-    margin: 0 0 12px;
-    color: var(--bistem-blue);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.privacy-page .privacy-updated {
+  margin: 20px 0 0;
+  color: var(--privacy-muted);
+  font-size: 14px;
 }
 
-.privacy-hero h1 {
-    position: relative;
-    z-index: 1;
-    margin: 0 0 18px;
-    color: var(--bistem-navy);
-    font-size: clamp(36px, 5vw, 54px);
-    font-weight: 750;
-    line-height: 1.2;
+/* Policy content */
+.privacy-page .privacy-content {
+  padding: 55px 20px 80px;
 }
 
-.privacy-intro {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 0;
-    color: #536678;
-    font-size: 18px;
+.privacy-page .privacy-content .privacy-container {
+  max-width: 900px;
 }
 
-.privacy-content {
-    padding: 54px 0 80px;
+.privacy-page .privacy-content p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
-.privacy-updated {
-    display: inline-block;
-    margin: 0 0 28px;
-    padding: 7px 13px;
-    border-left: 3px solid var(--bistem-orange);
-    background: #fff7f0;
-    color: #5f6670;
-    font-size: 14px;
+.privacy-page .privacy-content h2 {
+  margin: 38px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--privacy-border);
+  color: var(--privacy-navy);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
-.privacy-content p {
-    margin: 0 0 20px;
-    font-size: 16px;
+.privacy-page .privacy-content h2:first-of-type {
+  margin-top: 30px;
 }
 
-.privacy-content h2 {
-    margin: 36px 0 12px;
-    padding-left: 14px;
-    border-left: 3px solid var(--bistem-blue);
-    color: var(--bistem-navy);
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 1.4;
+.privacy-page .privacy-content ul {
+  margin: 0 0 24px;
+  padding-left: 25px;
 }
 
-.privacy-content a {
-    color: var(--bistem-blue);
-    text-underline-offset: 3px;
+.privacy-page .privacy-content li {
+  margin-bottom: 8px;
+  padding-left: 5px;
+  line-height: 1.75;
 }
 
-.privacy-content a:hover {
-    color: var(--bistem-orange);
+.privacy-page .privacy-content a {
+  color: var(--privacy-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
 }
 
-@media (max-width: 600px) {
-    .privacy-container {
-        width: min(100% - 32px, 1100px);
-    }
+.privacy-page .privacy-content a:hover {
+  color: var(--privacy-orange);
+}
 
-    .privacy-hero {
-        padding: 48px 0 44px;
-    }
+.privacy-page .privacy-content a:focus-visible {
+  outline: 2px solid var(--privacy-orange);
+  outline-offset: 4px;
+}
 
-    .privacy-intro {
-        font-size: 16px;
-    }
+/* Reading progress bar added by privacy-policy.js */
+.privacy-reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 0;
+  height: 3px;
+  background: var(--privacy-orange);
+  pointer-events: none;
+}
 
-    .privacy-content {
-        padding: 34px 0 55px;
-    }
+/* Responsive design */
+@media (max-width: 768px) {
+  .privacy-page .privacy-hero {
+    padding: 55px 20px 45px;
+  }
 
-    .privacy-content h2 {
-        margin-top: 28px;
-        font-size: 20px;
-    }
+  .privacy-page .privacy-content {
+    padding: 35px 20px 55px;
+  }
+
+  .privacy-page .privacy-content h2 {
+    margin-top: 30px;
+    font-size: 21px;
+  }
+
+  .privacy-page .privacy-content p,
+  .privacy-page .privacy-content li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-page .privacy-hero {
+    padding: 42px 18px 35px;
+  }
+
+  .privacy-page .privacy-content {
+    padding: 28px 18px 45px;
+  }
+
+  .privacy-page .privacy-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .privacy-page .privacy-hero > .privacy-container > p:not(.privacy-eyebrow):not(.privacy-updated) {
+    font-size: 15px;
+  }
+
+  .privacy-page .privacy-content h2 {
+    font-size: 19px;
+  }
 }

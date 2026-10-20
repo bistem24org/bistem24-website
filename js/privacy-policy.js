@@ -1,41 +1,45 @@
 
-document.addEventListener("DOMContentLoaded", async function () {
+/* =========================================
+   BiSTEM24 Privacy Policy Page
+   Reading progress indicator
+   ========================================= */
 
-    async function loadInclude(placeholderId, filePath) {
-        const placeholder = document.getElementById(placeholderId);
+document.addEventListener("DOMContentLoaded", function () {
+  const page = document.querySelector(".privacy-page");
 
-        if (!placeholder) {
-            return;
-        }
+  if (!page) return;
 
-        try {
-            const response = await fetch(filePath);
+  const progressBar = document.createElement("div");
+  progressBar.className = "privacy-reading-progress";
+  progressBar.setAttribute("aria-hidden", "true");
 
-            if (!response.ok) {
-                throw new Error(
-                    "Could not load " + filePath +
-                    " (HTTP " + response.status + ")"
-                );
-            }
+  document.body.appendChild(progressBar);
 
-            placeholder.innerHTML = await response.text();
+  function updateReadingProgress() {
+    const scrollableHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
 
-        } catch (error) {
-            console.error(
-                "BISTEM24 header/footer loading error:",
-                error
-            );
-        }
+    if (scrollableHeight <= 0) {
+      progressBar.style.width = "0%";
+      return;
     }
 
-    await loadInclude(
-        "header-placeholder",
-        "includes/header.html"
+    const scrollPosition =
+      window.scrollY || document.documentElement.scrollTop;
+
+    const progress = Math.min(
+      100,
+      Math.max(0, (scrollPosition / scrollableHeight) * 100)
     );
 
-    await loadInclude(
-        "footer-placeholder",
-        "includes/footer.html"
-    );
+    progressBar.style.width = progress + "%";
+  }
 
+  window.addEventListener("scroll", updateReadingProgress, {
+    passive: true
+  });
+
+  window.addEventListener("resize", updateReadingProgress);
+
+  updateReadingProgress();
 });
