@@ -1,0 +1,97 @@
+
+/* BISTEM24 Privacy Policy page */
+
+.privacy-page {
+    color: #333;
+    background: #fff;
+    font-family: inherit;
+    line-height: 1.8;
+}
+
+.privacy-page * {
+    box-sizing: border-box;
+}
+
+.privacy-container {
+    width: min(100% - 40px, 1100px);
+    margin: 0 auto;
+}
+
+.privacy-hero {
+    background: #f4f7f8;
+    padding: 75px 0 65px;
+    border-bottom: 1px solid #e7ebed;
+}
+
+.privacy-eyebrow {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.privacy-hero h1 {
+    margin: 0 0 18px;
+    color: #202d35;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.privacy-intro {
+    max-width: 680px;
+    margin: 0;
+    color: #59656c;
+    font-size: 18px;
+}
+
+.privacy-content {
+    padding: 55px 0 80px;
+}
+
+.privacy-updated {
+    margin-bottom: 30px;
+    color: #707b81;
+    font-size: 14px;
+}
+
+.privacy-content p {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.privacy-content h2 {
+    margin: 36px 0 12px;
+    color: #202d35;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.privacy-content h2:first-of-type {
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .privacy-container {
+        width: min(100% - 32px, 1100px);
+    }
+
+    .privacy-hero {
+        padding: 48px 0 42px;
+    }
+
+    .privacy-intro {
+        font-size: 16px;
+    }
+
+    .privacy-content {
+        padding: 35px 0 55px;
+    }
+
+    .privacy-content h2 {
+        font-size: 20px;
+        margin-top: 28px;
+    }
+}
