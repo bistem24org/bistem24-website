@@ -1,13 +1,20 @@
 
-/* BISTEM24 Privacy Policy page */
+/* BISTEM24 Privacy Policy page styling */
 
 .privacy-page {
-    color: #333;
-    background: #fff;
+    --bistem-blue: #1477b9;
+    --bistem-orange: #f58220;
+    --bistem-navy: #172f4d;
+    --bistem-text: #354353;
+    --bistem-light: #f3f8fc;
+
+    color: var(--bistem-text);
+    background: #ffffff;
     font-family: inherit;
     line-height: 1.8;
 }
 
+.privacy-page,
 .privacy-page * {
     box-sizing: border-box;
 }
@@ -18,13 +25,38 @@
 }
 
 .privacy-hero {
-    background: #f4f7f8;
-    padding: 75px 0 65px;
-    border-bottom: 1px solid #e7ebed;
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0 68px;
+    background: var(--bistem-light);
+    border-bottom: 1px solid #e1ebf3;
+}
+
+.privacy-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7px;
+    background: var(--bistem-orange);
+}
+
+.privacy-hero::after {
+    content: "";
+    position: absolute;
+    right: -65px;
+    bottom: -115px;
+    width: 240px;
+    height: 240px;
+    border: 30px solid rgba(20, 119, 185, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .privacy-eyebrow {
+    position: relative;
+    z-index: 1;
     margin: 0 0 12px;
+    color: var(--bistem-blue);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -32,27 +64,35 @@
 }
 
 .privacy-hero h1 {
+    position: relative;
+    z-index: 1;
     margin: 0 0 18px;
-    color: #202d35;
+    color: var(--bistem-navy);
     font-size: clamp(36px, 5vw, 54px);
-    font-weight: 700;
+    font-weight: 750;
     line-height: 1.2;
 }
 
 .privacy-intro {
-    max-width: 680px;
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
     margin: 0;
-    color: #59656c;
+    color: #536678;
     font-size: 18px;
 }
 
 .privacy-content {
-    padding: 55px 0 80px;
+    padding: 54px 0 80px;
 }
 
 .privacy-updated {
-    margin-bottom: 30px;
-    color: #707b81;
+    display: inline-block;
+    margin: 0 0 28px;
+    padding: 7px 13px;
+    border-left: 3px solid var(--bistem-orange);
+    background: #fff7f0;
+    color: #5f6670;
     font-size: 14px;
 }
 
@@ -63,14 +103,21 @@
 
 .privacy-content h2 {
     margin: 36px 0 12px;
-    color: #202d35;
+    padding-left: 14px;
+    border-left: 3px solid var(--bistem-blue);
+    color: var(--bistem-navy);
     font-size: 23px;
     font-weight: 700;
     line-height: 1.4;
 }
 
-.privacy-content h2:first-of-type {
-    margin-top: 30px;
+.privacy-content a {
+    color: var(--bistem-blue);
+    text-underline-offset: 3px;
+}
+
+.privacy-content a:hover {
+    color: var(--bistem-orange);
 }
 
 @media (max-width: 600px) {
@@ -79,7 +126,7 @@
     }
 
     .privacy-hero {
-        padding: 48px 0 42px;
+        padding: 48px 0 44px;
     }
 
     .privacy-intro {
@@ -87,11 +134,11 @@
     }
 
     .privacy-content {
-        padding: 35px 0 55px;
+        padding: 34px 0 55px;
     }
 
     .privacy-content h2 {
-        font-size: 20px;
         margin-top: 28px;
+        font-size: 20px;
     }
 }
